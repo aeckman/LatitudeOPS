@@ -1,0 +1,54 @@
+.start-menu {
+
+  position: absolute;
+
+  bottom: 45px;
+  left: 5px;
+
+  width: 220px;
+
+  background: #c0c0c0;
+
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  border-right: 3px solid #404040;
+  border-bottom: 3px solid #404040;
+
+  font-family: Arial, sans-serif;
+
+  z-index: 1000;
+
+}
+
+
+.menu-title {
+
+  background: #000080;
+
+  color: white;
+
+  font-weight: bold;
+
+  padding: 8px;
+
+}
+
+
+.menu-item {
+
+  padding: 10px 15px;
+
+  color: black;
+
+  cursor: pointer;
+
+}
+
+
+.menu-item:hover {
+
+  background: #000080;
+
+  color: white;
+
+}

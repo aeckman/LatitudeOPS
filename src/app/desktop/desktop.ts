@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { DesktopIcon } from '../icons/desktop-icon/desktop-icon';
 import { Taskbar } from '../taskbar/taskbar';
+import { StartMenu } from '../start-menu/start-menu';
 
 @Component({
   selector: 'app-desktop',
-  imports: [DesktopIcon, Taskbar],
+  imports: [DesktopIcon, Taskbar, StartMenu],
   templateUrl: './desktop.html',
   styleUrl: './desktop.scss'
 })
