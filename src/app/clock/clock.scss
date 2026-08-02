@@ -1,0 +1,31 @@
+.clock {
+
+  height: 28px;
+
+  min-width: 90px;
+
+  padding: 0 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #c0c0c0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  color: black;
+
+  border-top: 2px solid #808080;
+
+  border-left: 2px solid #808080;
+
+  border-right: 2px solid white;
+
+  border-bottom: 2px solid white;
+
+}

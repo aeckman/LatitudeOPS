@@ -1,14 +1,26 @@
 <div class="taskbar">
 
-  <button class="start-button">
-    🪟 Start
+  <button 
+    class="start-button" 
+    (click)="startClicked.emit()">
+
+    <img
+      class="start-icon"
+      src="/assets/icons/applications.png"
+      alt="Start">
+
+    <span>
+      Start
+    </span>
+
   </button>
+
 
   <div class="task-area">
   </div>
 
-  <div class="clock">
-    12:00 PM
-  </div>
+
+  <app-clock></app-clock>
+
 
 </div>

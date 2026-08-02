@@ -13,7 +13,12 @@
 
   </div>
 
-  <app-taskbar></app-taskbar>
-  <app-start-menu></app-start-menu>
+<app-taskbar
+  (startClicked)="toggleStartMenu()">
+</app-taskbar>
+
+<app-start-menu
+  [visible]="menuOpen">
+</app-start-menu>
 
 </div>

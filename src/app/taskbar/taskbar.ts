@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
+import { Clock } from '../clock/clock';
 
 @Component({
   selector: 'app-taskbar',
-  imports: [],
+  imports: [Clock],
   templateUrl: './taskbar.html',
-  styleUrl: './taskbar.scss',
+  styleUrl: './taskbar.scss'
 })
-export class Taskbar {}
+export class Taskbar {
+
+  startClicked = output();
+
+}

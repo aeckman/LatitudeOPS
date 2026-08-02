@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-start-menu',
@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './start-menu.scss'
 })
 export class StartMenu {
+
+  visible = input(false);
 
 }

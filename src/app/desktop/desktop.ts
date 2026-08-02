@@ -11,6 +11,12 @@ import { StartMenu } from '../start-menu/start-menu';
 })
 export class Desktop {
 
+  menuOpen = false;
+
+  toggleStartMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
   icons = [
     {
       image: '/assets/icons/computer.png',
