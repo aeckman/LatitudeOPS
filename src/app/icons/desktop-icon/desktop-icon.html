@@ -1,4 +1,13 @@
 <div class="desktop-icon">
-  <div class="icon-image">📁</div>
-  <div class="icon-label">My Computer</div>
+
+  <img 
+    class="icon-image"
+    [src]="image()"
+    [alt]="label()"
+  >
+
+  <div class="icon-label">
+    {{ label() }}
+  </div>
+
 </div>

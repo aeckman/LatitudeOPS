@@ -1,0 +1,24 @@
+.boot-screen {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Courier New", monospace;
+}
+
+.boot-content {
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+p {
+  font-size: 22px;
+  margin: 10px;
+}

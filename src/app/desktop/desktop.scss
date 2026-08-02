@@ -1,8 +1,19 @@
 .desktop {
-  width: 100vw;
-  height: 100vh;
-  background-color: #008080;
-  padding: 20px;
-  position: relative;
+  position: fixed;
+  inset: 0;
+
+  background-image: url('../../assets/wallpapers/clouds.png');
+  background-size: cover;
+  background-position: center;
+
   overflow: hidden;
+}
+
+.icon-area {
+
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
 }

@@ -1,19 +1,36 @@
 .desktop-icon {
-  width: 80px;
-  text-align: center;
+
+  width: 90px;
+
   color: white;
+
+  text-align: center;
+
   font-family: Arial, sans-serif;
+
   cursor: pointer;
-  position: absolute;
-  left: 20px;
-  top: 20px;
+
+  margin-bottom: 15px;
+
 }
 
 .icon-image {
-  font-size: 40px;
+
+  width: 48px;
+  height: 48px;
+
+  object-fit: contain;
+
 }
 
 .icon-label {
+
   margin-top: 5px;
+
   font-size: 14px;
+
+  line-height: 16px;
+
+  text-shadow: 1px 1px 2px black;
+
 }

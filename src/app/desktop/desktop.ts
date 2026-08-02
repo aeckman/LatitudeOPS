@@ -1,12 +1,40 @@
 import { Component } from '@angular/core';
 import { DesktopIcon } from '../icons/desktop-icon/desktop-icon';
+import { Taskbar } from '../taskbar/taskbar';
 
 @Component({
   selector: 'app-desktop',
-  imports: [DesktopIcon],
+  imports: [DesktopIcon, Taskbar],
   templateUrl: './desktop.html',
   styleUrl: './desktop.scss'
 })
 export class Desktop {
+
+  icons = [
+    {
+      image: '/assets/icons/computer.png',
+      label: 'My Computer'
+    },
+    {
+      image: '/assets/icons/documents.png',
+      label: 'Documents'
+    },
+    {
+      image: '/assets/icons/recycle-bin.png',
+      label: 'Recycle Bin'
+    },
+    {
+      image: '/assets/icons/internet.png',
+      label: 'Internet'
+    },
+    {
+      image: '/assets/icons/settings.png',
+      label: 'Control Panel'
+    },
+    {
+      image: '/assets/icons/applications.png',
+      label: 'Latitude Apps'
+    }
+  ];
 
 }

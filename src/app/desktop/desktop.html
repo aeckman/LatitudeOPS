@@ -1,3 +1,18 @@
 <div class="desktop">
-  <app-desktop-icon></app-desktop-icon>
+
+  <div class="icon-area">
+
+    @for (icon of icons; track icon.label) {
+
+      <app-desktop-icon
+        [image]="icon.image"
+        [label]="icon.label">
+      </app-desktop-icon>
+
+    }
+
+  </div>
+
+  <app-taskbar></app-taskbar>
+
 </div>
