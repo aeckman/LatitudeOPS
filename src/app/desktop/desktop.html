@@ -13,12 +13,25 @@
 
   </div>
 
-<app-taskbar
-  (startClicked)="toggleStartMenu()">
-</app-taskbar>
 
-<app-start-menu
-  [visible]="menuOpen">
-</app-start-menu>
+  <app-taskbar
+    (startClicked)="toggleStartMenu()">
+  </app-taskbar>
+
+
+  <app-start-menu
+    [visible]="menuOpen"
+    (appClicked)="openPasswordDialog()">
+  </app-start-menu>
+
+
+  @if (passwordDialogOpen) {
+
+    <app-password-dialog
+      (closed)="closePasswordDialog()">
+    </app-password-dialog>
+
+  }
+
 
 </div>

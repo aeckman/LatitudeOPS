@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
   selector: 'app-start-menu',
@@ -9,5 +9,7 @@ import { Component, input } from '@angular/core';
 export class StartMenu {
 
   visible = input(false);
+
+  appClicked = output();
 
 }
