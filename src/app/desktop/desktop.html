@@ -139,11 +139,9 @@
 
   @if (passwordDialogOpen()) {
 
-    <div class="dialog-layer">
-      <app-password-dialog
-        (closed)="closePasswordDialog()">
-      </app-password-dialog>
-    </div>
+    <app-password-dialog
+      (closed)="closePasswordDialog()">
+    </app-password-dialog>
 
   }
 

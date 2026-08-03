@@ -67,6 +67,7 @@ export class Desktop {
 
   openPasswordDialog() {
 
+    this.menuOpen.set(false);
     this.passwordDialogOpen.set(true);
 
   }
