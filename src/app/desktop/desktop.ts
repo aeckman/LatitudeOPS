@@ -257,7 +257,8 @@ export class Desktop {
 
     {
       image: '/assets/icons/computer.png',
-      label: 'My Computer'
+      label: 'My Computer',
+      applicationId: 'about-latitude-ops'
     },
 
     {

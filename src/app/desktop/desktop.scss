@@ -42,6 +42,72 @@
 
 }
 
+.about-latitude-ops {
+  min-height: calc(100% + 32px);
+  margin: -16px;
+  padding: 18px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: #c0c0c0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.about-content {
+  flex: 1;
+  padding: 14px;
+  background: #c0c0c0;
+  border-top: 2px solid #404040;
+  border-left: 2px solid #404040;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.about-content p {
+  margin: 0 0 12px;
+}
+
+.about-content .about-welcome {
+  font-weight: bold;
+}
+
+.about-content .about-signature {
+  margin-bottom: 0;
+}
+
+.about-actions {
+  padding-top: 14px;
+  text-align: center;
+}
+
+.about-actions button {
+  min-width: 82px;
+  padding: 5px 18px;
+  background: #c0c0c0;
+  color: black;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.about-actions button:active {
+  border-top-color: #404040;
+  border-left-color: #404040;
+  border-right-color: white;
+  border-bottom-color: white;
+}
+
+.about-actions button:focus-visible {
+  outline: 1px dotted black;
+  outline-offset: -5px;
+}
+
 .latitude-apps {
   min-height: 100%;
   margin: -16px;

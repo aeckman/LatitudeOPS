@@ -29,7 +29,45 @@
           (maximizeRequested)="toggleMaximizeWindow($event)"
           (closeRequested)="closeWindow($event)">
 
-          @if (window.applicationId === 'latitude-apps') {
+          @if (window.applicationId === 'about-latitude-ops') {
+
+            <div class="about-latitude-ops">
+
+              <div class="about-content">
+                <p class="about-welcome">
+                  Welcome to the LatitudeOPS Angular Playground
+                </p>
+
+                <p>
+                  This site was created as a hands-on environment for exploring Angular development, from foundational concepts to advanced application architecture.
+                </p>
+
+                <p>
+                  Every component, interface, and application on this platform is built using Angular and serves as a demonstration of real-world development techniques.
+                </p>
+
+                <p>
+                  LatitudeOPS is intentionally a living project. As new ideas are introduced and architectural patterns are tested, the site may evolve frequently &mdash; including occasional changes, experiments, and unexpected behavior along the way.
+                </p>
+
+                <p>
+                  The goal is not just to showcase finished applications, but to demonstrate the process of designing, building, and improving modern software.
+                </p>
+
+                <p class="about-signature">&mdash; Andy</p>
+              </div>
+
+              <div class="about-actions">
+                <button
+                  type="button"
+                  (click)="closeWindow(window.id)">
+                  OK
+                </button>
+              </div>
+
+            </div>
+
+          } @else if (window.applicationId === 'latitude-apps') {
 
             <div class="latitude-apps">
 

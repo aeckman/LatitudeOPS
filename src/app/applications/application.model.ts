@@ -1,4 +1,5 @@
 export type ApplicationId =
+  | 'about-latitude-ops'
   | 'latitude-apps'
   | 'energy-grid-live'
   | 'tesla-fleet-api-rfg'
@@ -12,6 +13,11 @@ export interface ApplicationDefinition {
 }
 
 export const APPLICATIONS: Record<ApplicationId, ApplicationDefinition> = {
+  'about-latitude-ops': {
+    id: 'about-latitude-ops',
+    title: 'About LatitudeOPS',
+    icon: '/assets/icons/computer.png'
+  },
   'latitude-apps': {
     id: 'latitude-apps',
     title: 'Latitude Apps',
