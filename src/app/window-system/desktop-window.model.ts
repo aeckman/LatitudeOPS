@@ -14,6 +14,7 @@ export interface DesktopWindow {
   applicationId: ApplicationId;
   title: string;
   icon: string;
+  description?: string;
   mode: DesktopWindowMode;
   zIndex: number;
   bounds: WindowBounds;

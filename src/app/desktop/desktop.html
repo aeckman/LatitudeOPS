@@ -89,9 +89,26 @@
 
           } @else {
 
-            <div class="application-placeholder">
-              <h2>{{ window.title }}</h2>
-              <p>Application content will be added in a future update.</p>
+            <div class="application-access-screen">
+
+              <div class="application-summary">
+                <img [src]="window.icon" alt="">
+
+                <div>
+                  <h2>{{ window.title }}</h2>
+                  <p>{{ window.description }}</p>
+                </div>
+              </div>
+
+              <div class="application-actions">
+                <button
+                  type="button"
+                  class="application-access"
+                  (click)="openPasswordDialog()">
+                  ACCESS
+                </button>
+              </div>
+
             </div>
 
           }

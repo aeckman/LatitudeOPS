@@ -10,6 +10,7 @@ export interface ApplicationDefinition {
   id: ApplicationId;
   title: string;
   icon: string;
+  description?: string;
 }
 
 export const APPLICATIONS: Record<ApplicationId, ApplicationDefinition> = {
@@ -26,21 +27,25 @@ export const APPLICATIONS: Record<ApplicationId, ApplicationDefinition> = {
   'energy-grid-live': {
     id: 'energy-grid-live',
     title: 'Energy Grid LIVE',
-    icon: '/assets/icons/applications.png'
+    icon: '/assets/icons/applications.png',
+    description: 'Realtime Energy Reporting and historical events'
   },
   'tesla-fleet-api-rfg': {
     id: 'tesla-fleet-api-rfg',
     title: 'Tesla Fleet API RFG',
-    icon: '/assets/icons/applications.png'
+    icon: '/assets/icons/applications.png',
+    description: 'Get the Tesla data on my Fleet'
   },
   'airplane-live-app': {
     id: 'airplane-live-app',
     title: 'Airplane Live App',
-    icon: '/assets/icons/applications.png'
+    icon: '/assets/icons/applications.png',
+    description: 'Live tracking of Airplanes'
   },
   'harley-data-monitor': {
     id: 'harley-data-monitor',
     title: 'Harley Data Monitor',
-    icon: '/assets/icons/applications.png'
+    icon: '/assets/icons/applications.png',
+    description: 'Dynojet Power Vision on the Harley Ultra Limited'
   }
 };

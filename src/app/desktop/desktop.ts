@@ -101,6 +101,7 @@ export class Desktop {
       applicationId,
       title: application.title,
       icon: application.icon,
+      description: application.description,
       mode: 'normal',
       zIndex: this.nextZIndex++,
       bounds: {
