@@ -16,6 +16,8 @@
 
   align-items: center;
 
+  z-index: 100;
+
 }
 
 
@@ -81,5 +83,62 @@
 .task-area {
 
   flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  gap: 4px;
+
+  padding: 0 6px;
+
+  overflow: hidden;
+
+}
+
+.task-button {
+  min-width: 90px;
+  max-width: 180px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  overflow: hidden;
+  background: #c0c0c0;
+  color: black;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.task-button.active {
+  border-top-color: #404040;
+  border-left-color: #404040;
+  border-right-color: white;
+  border-bottom-color: white;
+  background-color: #d0d0d0;
+}
+
+.task-button.minimized {
+  color: #404040;
+}
+
+.task-button img {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.task-button span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
 }

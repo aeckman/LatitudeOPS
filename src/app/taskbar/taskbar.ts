@@ -1,5 +1,6 @@
-import { Component, output } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { Clock } from '../clock/clock';
+import { DesktopWindow } from '../window-system/desktop-window.model';
 
 @Component({
   selector: 'app-taskbar',
@@ -9,6 +10,14 @@ import { Clock } from '../clock/clock';
 })
 export class Taskbar {
 
-  startClicked = output();
+  startMenuOpen = input(false);
+
+  windows = input<readonly DesktopWindow[]>([]);
+
+  activeWindowId = input<string | null>(null);
+
+  startMenuToggleRequested = output<void>();
+
+  windowButtonClicked = output<string>();
 
 }

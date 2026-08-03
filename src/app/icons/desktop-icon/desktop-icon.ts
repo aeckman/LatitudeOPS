@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
   selector: 'app-desktop-icon',
@@ -10,5 +10,7 @@ export class DesktopIcon {
 
   image = input('');
   label = input('');
+
+  activated = output<void>();
 
 }

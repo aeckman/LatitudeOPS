@@ -1,0 +1,147 @@
+:host {
+  display: contents;
+}
+
+.window-frame {
+  position: absolute;
+  box-sizing: border-box;
+  min-width: 260px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+  overflow: hidden;
+  background: #c0c0c0;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  font-family: Arial, sans-serif;
+  pointer-events: auto;
+}
+
+.window-frame.maximized {
+  top: 0 !important;
+  right: 0;
+  bottom: 0;
+  left: 0 !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.title-bar {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 3px;
+  background: #808080;
+  color: #d8d8d8;
+  font-size: 13px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.active .title-bar {
+  background: #000080;
+  color: white;
+}
+
+.window-title {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.window-title img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.window-title span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.window-controls {
+  display: flex;
+  gap: 2px;
+  margin-left: 8px;
+}
+
+.window-controls button {
+  position: relative;
+  width: 20px;
+  height: 18px;
+  padding: 0;
+  background: #c0c0c0;
+  color: black;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  cursor: pointer;
+}
+
+.window-controls button:active {
+  border-top-color: #404040;
+  border-left-color: #404040;
+  border-right-color: white;
+  border-bottom-color: white;
+}
+
+.minimize-symbol {
+  position: absolute;
+  left: 4px;
+  bottom: 3px;
+  width: 8px;
+  height: 2px;
+  background: black;
+}
+
+.maximize-symbol {
+  position: absolute;
+  inset: 3px;
+  border: 1px solid black;
+  border-top-width: 2px;
+}
+
+.maximize-symbol.restore-symbol {
+  inset: 5px 2px 2px 5px;
+}
+
+.maximize-symbol.restore-symbol::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 7px;
+  top: -5px;
+  left: -5px;
+  border: 1px solid black;
+  border-top-width: 2px;
+  background: #c0c0c0;
+}
+
+.close-symbol {
+  position: relative;
+  top: -1px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 14px;
+}
+
+.window-content {
+  flex: 1;
+  margin-top: 3px;
+  padding: 16px;
+  overflow: auto;
+  background: white;
+  color: black;
+  border-top: 2px solid #404040;
+  border-left: 2px solid #404040;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}

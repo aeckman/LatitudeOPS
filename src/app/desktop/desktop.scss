@@ -16,4 +16,94 @@
   top: 20px;
   left: 20px;
 
+  z-index: 1;
+
+}
+
+.window-layer {
+  position: absolute;
+  inset: 0 0 40px 0;
+  z-index: 10;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.application-placeholder {
+  font-family: Arial, sans-serif;
+}
+
+.application-placeholder h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.application-placeholder p {
+  font-size: 14px;
+
+}
+
+.latitude-apps {
+  min-height: 100%;
+  margin: -16px;
+  padding: 16px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  gap: 12px;
+  background: #c0c0c0;
+}
+
+.application-launcher {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  overflow: hidden;
+  background: #c0c0c0;
+  color: black;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.application-launcher:active {
+  border-top-color: #404040;
+  border-left-color: #404040;
+  border-right-color: white;
+  border-bottom-color: white;
+}
+
+.application-launcher:focus-visible {
+  outline: 1px dotted black;
+  outline-offset: -5px;
+}
+
+.application-launcher img {
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.application-launcher span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dialog-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+.dialog-layer app-password-dialog {
+  pointer-events: auto;
 }

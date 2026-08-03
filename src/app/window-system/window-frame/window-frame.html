@@ -1,0 +1,53 @@
+<section
+  class="window-frame"
+  [class.active]="active()"
+  [class.maximized]="window().mode === 'maximized'"
+  [style.left.px]="window().bounds.x"
+  [style.top.px]="window().bounds.y"
+  [style.width.px]="window().bounds.width"
+  [style.height.px]="window().bounds.height"
+  [style.z-index]="window().zIndex"
+  (mousedown)="requestFocus()">
+
+  <header
+    class="title-bar"
+    (dblclick)="requestMaximize($event)">
+
+    <div class="window-title">
+      <img [src]="window().icon" alt="">
+      <span>{{ window().title }}</span>
+    </div>
+
+    <div class="window-controls">
+      <button
+        type="button"
+        aria-label="Minimize"
+        (click)="requestMinimize($event)">
+        <span class="minimize-symbol"></span>
+      </button>
+
+      <button
+        type="button"
+        [attr.aria-label]="window().mode === 'maximized' ? 'Restore' : 'Maximize'"
+        (click)="requestMaximize($event)">
+        <span
+          class="maximize-symbol"
+          [class.restore-symbol]="window().mode === 'maximized'">
+        </span>
+      </button>
+
+      <button
+        type="button"
+        aria-label="Close"
+        (click)="requestClose($event)">
+        <span class="close-symbol">&#215;</span>
+      </button>
+    </div>
+
+  </header>
+
+  <div class="window-content">
+    <ng-content></ng-content>
+  </div>
+
+</section>

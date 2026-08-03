@@ -2,7 +2,8 @@
 
   <button 
     class="start-button" 
-    (click)="startClicked.emit()">
+    [attr.aria-expanded]="startMenuOpen()"
+    (click)="startMenuToggleRequested.emit()">
 
     <img
       class="start-icon"
@@ -17,6 +18,24 @@
 
 
   <div class="task-area">
+
+    @for (window of windows(); track window.id) {
+
+      <button
+        type="button"
+        class="task-button"
+        [class.active]="activeWindowId() === window.id && window.mode !== 'minimized'"
+        [class.minimized]="window.mode === 'minimized'"
+        [attr.aria-pressed]="activeWindowId() === window.id && window.mode !== 'minimized'"
+        (click)="windowButtonClicked.emit(window.id)">
+
+        <img [src]="window.icon" alt="">
+        <span>{{ window.title }}</span>
+
+      </button>
+
+    }
+
   </div>
 
 

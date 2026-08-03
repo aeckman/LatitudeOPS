@@ -6,7 +6,8 @@
 
       <app-desktop-icon
         [image]="icon.image"
-        [label]="icon.label">
+        [label]="icon.label"
+        (activated)="openDesktopApplication(icon.applicationId)">
       </app-desktop-icon>
 
     }
@@ -14,22 +15,80 @@
   </div>
 
 
+  <div class="window-layer">
+
+    @for (window of openWindows(); track window.id) {
+
+      @if (window.mode !== 'minimized') {
+
+        <app-window-frame
+          [window]="window"
+          [active]="activeWindowId() === window.id"
+          (focusRequested)="focusWindow($event)"
+          (minimizeRequested)="minimizeWindow($event)"
+          (maximizeRequested)="toggleMaximizeWindow($event)"
+          (closeRequested)="closeWindow($event)">
+
+          @if (window.applicationId === 'latitude-apps') {
+
+            <div class="latitude-apps">
+
+              @for (application of latitudeApplications; track application.id) {
+
+                <button
+                  type="button"
+                  class="application-launcher"
+                  (click)="openPasswordDialog()">
+
+                  <img [src]="application.icon" alt="">
+                  <span>{{ application.title }}</span>
+
+                </button>
+
+              }
+
+            </div>
+
+          } @else {
+
+            <div class="application-placeholder">
+              <h2>{{ window.title }}</h2>
+              <p>Application content will be added in a future update.</p>
+            </div>
+
+          }
+
+        </app-window-frame>
+
+      }
+
+    }
+
+  </div>
+
+
   <app-taskbar
-    (startClicked)="toggleStartMenu()">
+    [startMenuOpen]="menuOpen()"
+    [windows]="openWindows()"
+    [activeWindowId]="activeWindowId()"
+    (windowButtonClicked)="handleTaskbarWindowClick($event)"
+    (startMenuToggleRequested)="toggleStartMenu()">
   </app-taskbar>
 
 
   <app-start-menu
-    [visible]="menuOpen"
-    (appClicked)="openPasswordDialog()">
+    [visible]="menuOpen()"
+    (applicationSelected)="selectApplication($event)">
   </app-start-menu>
 
 
-  @if (passwordDialogOpen) {
+  @if (passwordDialogOpen()) {
 
-    <app-password-dialog
-      (closed)="closePasswordDialog()">
-    </app-password-dialog>
+    <div class="dialog-layer">
+      <app-password-dialog
+        (closed)="closePasswordDialog()">
+      </app-password-dialog>
+    </div>
 
   }
 
